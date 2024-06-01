@@ -10,9 +10,7 @@ function HomePage() {
           <p className="description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
             odio. Praesent libero. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Integer nec odio. Praesent libero. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Integer nec odio.
-            Praesent libero.
+            adipiscing elit. 
           </p>
 
           <SearchBar />
