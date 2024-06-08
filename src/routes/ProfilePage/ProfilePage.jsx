@@ -1,10 +1,10 @@
-import Chat from "../../components/Chat/Chat";
-import List from "../../components/List/List";
-import "./ProfilePage.scss";
+import Chat from "../../components/chat/Chat";
+import List from "../../components/list/List";
+import "./profilePage.scss";
 
 function ProfilePage() {
   return (
-    <div className="ProfilePage">
+    <div className="profilePage">
       <div className="details">
         <div className="wrapper">
           <div className="title">
@@ -39,7 +39,7 @@ function ProfilePage() {
       </div>
       <div className="chatContainer">
         <div className="wrapper">
-          <Chat />
+          <Chat/>
         </div>
       </div>
     </div>

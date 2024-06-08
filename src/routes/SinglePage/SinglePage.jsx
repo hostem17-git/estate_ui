@@ -1,33 +1,30 @@
+import "./singlePage.scss";
 import Slider from "../../components/slider/Slider";
-import "./SinglePage.scss";
 import Map from "../../components/map/Map";
-
-import { singlePostData, userData } from "../../lib/dummyData";
+import { singlePostData, userData } from "../../lib/dummydata";
 
 function SinglePage() {
-  const postData = singlePostData;
-  const user = userData;
   return (
-    <div className="SinglePage">
+    <div className="singlePage">
       <div className="details">
         <div className="wrapper">
-          <Slider images={postData.images} />
+          <Slider images={singlePostData.images} />
           <div className="info">
             <div className="top">
               <div className="post">
-                <h1>{postData.title}</h1>
+                <h1>{singlePostData.title}</h1>
                 <div className="address">
                   <img src="/pin.png" alt="" />
-                  <span>{postData.address}</span>
+                  <span>{singlePostData.address}</span>
                 </div>
-                <div className="price">{postData.price}</div>
+                <div className="price">$ {singlePostData.price}</div>
               </div>
               <div className="user">
-                <img src={user.img} alt="" />
-                <span>{user.name}</span>
+                <img src={userData.img} alt="" />
+                <span>{userData.name}</span>
               </div>
             </div>
-            <div className="bottom">{postData.description}</div>
+            <div className="bottom">{singlePostData.description}</div>
           </div>
         </div>
       </div>
@@ -46,13 +43,13 @@ function SinglePage() {
               <img src="/pet.png" alt="" />
               <div className="featureText">
                 <span>Pet Policy</span>
-                <p>Pet allowed</p>
+                <p>Pets Allowed</p>
               </div>
             </div>
             <div className="feature">
               <img src="/fee.png" alt="" />
               <div className="featureText">
-                <span>Property fee</span>
+                <span>Property Fees</span>
                 <p>Must have 3x the rent in total household income</p>
               </div>
             </div>
@@ -61,7 +58,7 @@ function SinglePage() {
           <div className="sizes">
             <div className="size">
               <img src="/size.png" alt="" />
-              <span>80sqft</span>
+              <span>80 sqft</span>
             </div>
             <div className="size">
               <img src="/bed.png" alt="" />
@@ -73,23 +70,23 @@ function SinglePage() {
             </div>
           </div>
           <p className="title">Nearby Places</p>
-          <div className="listHorizental">
+          <div className="listHorizontal">
             <div className="feature">
               <img src="/school.png" alt="" />
               <div className="featureText">
                 <span>School</span>
                 <p>250m away</p>
               </div>
-            </div>{" "}
+            </div>
             <div className="feature">
-              <img src="/bus.png" alt="" />
+              <img src="/pet.png" alt="" />
               <div className="featureText">
-                <span>Bus stop</span>
+                <span>Bus Stop</span>
                 <p>100m away</p>
               </div>
-            </div>{" "}
+            </div>
             <div className="feature">
-              <img src="/restaurant.png" alt="" />
+              <img src="/fee.png" alt="" />
               <div className="featureText">
                 <span>Restaurant</span>
                 <p>200m away</p>
@@ -97,8 +94,8 @@ function SinglePage() {
             </div>
           </div>
           <p className="title">Location</p>
-          <div className="mapContainr">
-            <Map items={[postData]} />
+          <div className="mapContainer">
+            <Map items={[singlePostData]} />
           </div>
           <div className="buttons">
             <button>
@@ -107,7 +104,7 @@ function SinglePage() {
             </button>
             <button>
               <img src="/save.png" alt="" />
-              Save the place
+              Save the Place
             </button>
           </div>
         </div>

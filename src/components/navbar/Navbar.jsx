@@ -1,22 +1,22 @@
 import { useState } from "react";
 import "./navbar.scss";
 import { Link } from "react-router-dom";
+
 function Navbar() {
   const [open, setOpen] = useState(false);
 
   const user = true;
-
   return (
-    <div className="nav">
+    <nav>
       <div className="left">
-        <a className="logo" href="/">
+        <a href="/" className="logo">
           <img src="/logo.png" alt="" />
           <span>LamaEstate</span>
         </a>
-        <a href="Home">Home</a>
-        <a href="About">About</a>
-        <a href="Contact">Contact</a>
-        <a href="Agents">Agents</a>
+        <a href="/">Home</a>
+        <a href="/">About</a>
+        <a href="/">Contact</a>
+        <a href="/">Agents</a>
       </div>
       <div className="right">
         {user ? (
@@ -33,26 +33,29 @@ function Navbar() {
           </div>
         ) : (
           <>
-            <a href="Agents">Sign in</a>
-            <a className="register" href="Agents">
+            <a href="/">Sign in</a>
+            <a href="/" className="register">
               Sign up
             </a>
           </>
         )}
         <div className="menuIcon">
-          <img src="/menu.png" alt="" onClick={() => setOpen(!open)} />
+          <img
+            src="/menu.png"
+            alt=""
+            onClick={() => setOpen((prev) => !prev)}
+          />
         </div>
-
-        <div className={`menu ${open ? "active" : ""}`}>
-          <a href="Home">Home</a>
-          <a href="About">About</a>
-          <a href="Contact">Contact</a>
-          <a href="Agents">Agents</a>
-          <a href="Agents">Sign in</a>
-          <a href="Agents">Sign up</a>
+        <div className={open ? "menu active" : "menu"}>
+          <a href="/">Home</a>
+          <a href="/">About</a>
+          <a href="/">Contact</a>
+          <a href="/">Agents</a>
+          <a href="/">Sign in</a>
+          <a href="/">Sign up</a>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
 

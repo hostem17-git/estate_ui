@@ -1,4 +1,4 @@
-import "./Filter.scss";
+import "./filter.scss";
 
 function Filter() {
   return (
@@ -13,23 +13,23 @@ function Filter() {
             type="text"
             id="city"
             name="city"
-            placeholder="city location"
+            placeholder="City Location"
           />
         </div>
       </div>
       <div className="bottom">
         <div className="item">
           <label htmlFor="type">Type</label>
-          <select id="type" name="type">
-            <option value="">Any</option>
+          <select name="type" id="type">
+            <option value="">any</option>
             <option value="buy">Buy</option>
             <option value="rent">Rent</option>
           </select>
         </div>
         <div className="item">
           <label htmlFor="property">Property</label>
-          <select id="property" name="property">
-            <option value="">Any</option>
+          <select name="property" id="property">
+            <option value="">any</option>
             <option value="apartment">Apartment</option>
             <option value="house">House</option>
             <option value="condo">Condo</option>
@@ -48,18 +48,21 @@ function Filter() {
         <div className="item">
           <label htmlFor="maxPrice">Max Price</label>
           <input
-            type="number"
+            type="text"
             id="maxPrice"
             name="maxPrice"
             placeholder="any"
           />
         </div>
-
         <div className="item">
           <label htmlFor="bedroom">Bedroom</label>
-          <input type="text" id="bedroom" name="bedroom" placeholder="any" />
+          <input
+            type="text"
+            id="bedroom"
+            name="bedroom"
+            placeholder="any"
+          />
         </div>
-
         <button>
           <img src="/search.png" alt="" />
         </button>
