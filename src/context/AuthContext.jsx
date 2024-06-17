@@ -8,7 +8,9 @@ export const AuthContextProvider = ({ children }) => {
   );
 
   const updateUser = (data) => {
-    if (data) {
+    console.log("in Update user context");
+    console.log(data);
+    if (data && data.userInfo) {
       setCurrentUser(data.userInfo);
     } else {
       setCurrentUser(data);
@@ -18,7 +20,7 @@ export const AuthContextProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(currentUser));
   }, [currentUser]);
-  
+
   return (
     <AuthContext.Provider value={{ currentUser, updateUser }}>
       {" "}
