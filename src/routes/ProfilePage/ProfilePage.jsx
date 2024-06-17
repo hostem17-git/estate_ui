@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
-import Chat from "../../components/chat/Chat";
-import List from "../../components/list/List";
-import apiRequest from "../../lib/apiRequest";
+import Chat from "../../components/chat/Chat.jsx";
+import List from "../../components/list/List.jsx";
+import apiRequest from "../../lib/apiRequest.js";
 import "./profilePage.scss";
 import { useContext, useEffect } from "react";
 
@@ -46,7 +46,9 @@ function ProfilePage() {
           </div>
           <div className="title">
             <h1>My List</h1>
-            <button>Create New Post</button>
+            <Link to="/add">
+              <button>Create New Post</button>
+            </Link>
           </div>
           <List />
           <div className="title">
